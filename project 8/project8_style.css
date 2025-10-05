@@ -1,0 +1,40 @@
+/* Fade-in for hero */
+.fade-in {
+  animation: fadeIn 2s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Slide-in for section titles */
+.slide-in {
+  animation: slideIn 1.5s ease-in-out;
+}
+
+@keyframes slideIn {
+  from { opacity: 0; transform: translateX(-50px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+/* Card animations */
+.menu-card {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: riseUp 1.5s ease forwards;
+}
+
+.menu-card:nth-child(1) { animation-delay: 0.3s; }
+.menu-card:nth-child(2) { animation-delay: 0.6s; }
+.menu-card:nth-child(3) { animation-delay: 0.9s; }
+
+@keyframes riseUp {
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Hover effect */
+.menu-card:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
+}
